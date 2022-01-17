@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__.'/database.php';
-require_once __DIR__.'/ClassMovie.php';
+require_once __DIR__.'/ClassDisk.php';
 
 
 
