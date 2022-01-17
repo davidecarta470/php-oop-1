@@ -1,10 +1,7 @@
 <?php
 
 require_once __DIR__.'/database.php';
-require_once __DIR__.'/ClassDisk.php';
-
-
-
+require_once __DIR__.'/Disk.php';
 
 ?>
 <!DOCTYPE html>
@@ -34,26 +31,29 @@ require_once __DIR__.'/ClassDisk.php';
 <body>
   <div class="container">
     <?php foreach($disks as $disk):
-    $newDisk = new Disk($disk["title"]);
-    $newDisk->author = $disk["author"];
-    $newDisk->poster = $disk["poster"];
-    $newDisk->year = $disk["year"];
-    $newDisk->genre = $disk["genre"];
-    
+      $newDisk = new Disk($disk["title"]);
+      $newDisk->author = $disk["author"];
+      $newDisk->poster = $disk["poster"];
+      $newDisk->year = $disk["year"];
+      $newDisk->genre = $disk["genre"];
     ?>
-   
-  
-    
-  
-    <div class="item">
-      <div>
+      <div class="item">
         <img src="<?php echo $newDisk->poster?>" alt=""> 
         <h2><?php echo $newDisk->title ?></h2> 
         <h3><?php echo $newDisk->getYear( $disk["year"]) ?></h3> 
-        
       </div>
-    </div>
     <?php endforeach ?>
   </div>
 </body>
 </html>
+
+
+
+        
+        
+        
+    
+   
+  
+    
+  
